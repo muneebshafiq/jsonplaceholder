@@ -1,0 +1,26 @@
+table {
+    width: 100%;
+    margin: 0 5%;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 95% !important;
+}
+
+.user-row:hover {
+    background-color: #00a3a9;
+    cursor: pointer;
+}
+
+.mat-row:hover > .mat-cell {
+    color:  white;
+    border: 0;
+  }
+
+.title {
+    padding-top: 15px;
+}

@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-dark custom-color">
+    <a class="navbar-brand" routerLink="/admin">JSON Placeholder</a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/posts" routerLinkActive="active">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/users/list" routerLinkActive="active">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/users/add" routerLinkActive="active">Add User</a>
+        </li>
+      </ul>
+  </nav>
+
+<div style="height: 90%;">
+    <router-outlet></router-outlet>
+</div>

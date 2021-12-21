@@ -1,0 +1,20 @@
+.navbar {
+    padding-left: 15px;
+    height: 10%;
+}
+
+.custom-color {
+    background-color: #00a3a9;
+}
+
+.navbar {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+}
+
+.navbar-nav {
+    flex-direction: row !important;
+    .nav-link {
+        padding: 8px !important;
+    }
+}

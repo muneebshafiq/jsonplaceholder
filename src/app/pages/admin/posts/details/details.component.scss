@@ -1,0 +1,21 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #333744;
+    height: 100% !important;
+}
+
+.post-card {
+    max-width: 400px;
+  }
+
+  a {
+      cursor: pointer;
+      text-decoration: none;
+      color: #00a3a9;
+      &:hover {
+        color: #009499 !important;
+      }
+  }

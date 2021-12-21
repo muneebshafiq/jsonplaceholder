@@ -1,0 +1,18 @@
+<div *ngIf="userPosts" class="main-container">
+    <div class="card">
+        <div class="text">
+            <img src="https://cdn-icons-png.flaticon.com/512/4018/4018431.png" alt="">
+            <h3>{{ user.name }}</h3>
+            <p>{{ user.email }}</p>
+            <p>
+                <b>{{ user.company?.name | uppercase }}</b>
+                <br>
+                {{ user.company?.catchPhrase }}
+                <br>
+                {{ user.company?.bs }}
+            </p>
+        </div>
+        <button type="button" class="btn">
+            Posts <span class="badge badge-light">{{userPosts}}</span>
+        </button>
+</div>

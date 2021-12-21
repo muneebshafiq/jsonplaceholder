@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <h1 class="title">Posts</h1>
+    <div class="row card-list">
+        <mat-paginator [pageSizeOptions]="[15, 25, 35]">
+        </mat-paginator>
+        <div *ngFor="let post of obs | async" class="card-container">
+            <mat-card class="post-card clickable" (click)="onCardClick(post.id)" matRipple>
+                <mat-card-title>{{post.id}}</mat-card-title>
+                <!-- <mat-card-subtitle>{{ post.title }}</mat-card-subtitle> -->
+                <mat-card-content>
+                  <p>{{ post.title | titlecase }}</p>
+                </mat-card-content>
+              </mat-card>
+              
+        </div>
+    </div>
+</div>

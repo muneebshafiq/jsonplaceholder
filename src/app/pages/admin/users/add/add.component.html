@@ -1,0 +1,78 @@
+<div class="main-container">
+    <div class="card">
+        <!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <label for="first-name">First Name: </label>
+            <input id="first-name" type="text" formControlName="firstName" required>
+          
+            <label for="last-name">Last Name: </label>
+            <input id="last-name" type="text" formControlName="lastName">
+          
+            <div profileFormName="address">
+              <h2>Address</h2>
+          
+              <label for="street">Street: </label>
+              <input id="street" type="text" formControlName="street">
+          
+              <label for="city">City: </label>
+              <input id="city" type="text" formControlName="city">
+          
+              <label for="state">State: </label>
+              <input id="state" type="text" formControlName="state">
+          
+              <label for="zip">Zip Code: </label>
+              <input id="zip"type="text" formControlName="zip">
+            </div>
+            <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+          </form> -->
+          <mat-toolbar>
+            <span>Add User</span>
+          </mat-toolbar>
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+              
+              <mat-form-field>
+                <input matInput placeholder="Email Address" type="email" formControlName="email">
+                <mat-error *ngIf="!profileForm.controls['email'].valid && profileForm.controls['email'].touched">
+                  {{ profileForm.get('email')?.hasError('required') ? 'This field is required' : profileForm.get('email')?.hasError('email') ? 'Not a valid email' : '' }}
+                </mat-error>
+              </mat-form-field>
+
+              <span class="divide">
+                <mat-form-field style="margin-right: 8%;">
+                  <input matInput placeholder="First Name" formControlName="firstName">
+                  <mat-error *ngIf="!profileForm.controls['firstName'].valid && profileForm.controls['firstName'].touched">
+                    {{ profileForm.get('firstName')?.hasError('required') ? 'This field is required' : 'Maximum 60 characters allowed' }}
+                  </mat-error>
+                </mat-form-field>
+  
+                <mat-form-field>
+                  <input matInput placeholder="Last Name" formControlName="lastName">
+                  <mat-error *ngIf="!profileForm.controls['lastName'].valid && profileForm.controls['lastName'].touched">
+                    {{ profileForm.get('lastName')?.hasError('required') ? 'This field is required' : 'Maximum 60 characters allowed'  }}
+                  </mat-error>
+                </mat-form-field>
+              </span>
+
+              <mat-form-field>
+                <input matInput placeholder="Mobile No." type="number" formControlName="mobileNo">
+                <mat-error *ngIf="!profileForm.controls['mobileNo'].valid && profileForm.controls['mobileNo'].touched">
+                  {{ titleAlert }}
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput placeholder="Personal Id" formControlName="personalId">
+                <mat-error *ngIf="!profileForm.controls['personalId'].valid && profileForm.controls['personalId'].touched">
+                  {{ profileForm.get('personalId')?.hasError('required') ? 'This field is required' : 'Personal Id should be of exact 11 characters' }}
+                </mat-error>
+              </mat-form-field>
+
+              <mat-radio-group color="primary" placeholder="Gender" formControlName="gender" aria-label="Select an option">
+                <mat-radio-button style="margin-right: 25px;" value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+              </mat-radio-group>
+
+
+            <button type="submit" mat-flat-button color="primary" [disabled]="!profileForm.valid">Submit</button>
+          </form>
+    </div>
+</div>

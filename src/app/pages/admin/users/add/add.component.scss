@@ -1,0 +1,51 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #333744;
+    height: 100% !important;
+}
+
+.card, form {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 500px;
+  }
+
+  mat-toolbar {
+      background-color: #00a3a9;
+      color: #fff;
+      margin-bottom: 15px;
+      span {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+      }
+  }
+
+  .divide {
+      width: 100%; 
+      mat-form-field {
+        width: 46%;
+    }
+  }
+
+  mat-form-field, mat-radio-group {
+      width: 100%;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
